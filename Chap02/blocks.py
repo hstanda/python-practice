@@ -9,6 +9,7 @@ if x < y:
     print('x < y: x is {} and y is {}'.format(x, y))
     print('line 2')
     print('line 3')
-
-
-print('Z is {}'.format(z))
+elif x > y:
+    print("elif ")
+else:
+    print('else block')
