@@ -1,9 +1,8 @@
-#!///usr/bin/python3.6
-import platform
+inps = input('Erope floor? ')
+usf = int(inps) + 1
+print('US fllor number ' + str(usf))
 
-def main():
-  my_function()
-def my_function():
-  print("This is a python version {}".format(platform.python_version()))
-
-if __name__ == '__main__': main()
+if usf < 4:
+    print('Building is small')
+else:
+    print('building  is tall')
