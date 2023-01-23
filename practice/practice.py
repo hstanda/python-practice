@@ -113,17 +113,36 @@ names = ["Jack", "Michel", "Savrin", "Cherry", "Jack",
 handle = open("sample.txt")
 
 times = dict()
+dictOdWorkds  = dict()
+
 for line in handle:
     words = line.split()
     for word in words:
         times[word] = times.get(word, 0)+1
+        
+# bigCount = None
+# bigWord = None
 
-bigCount = None
-bigWord = None
+# for word, count in times.items():
+#     if bigCount is None or count > bigCount:
+#         bigCount = count
+#         bigWord = word
+        
+# print(times)
 
-for word, count in times.items():
-    if bigCount is None or count > bigCount:
-        bigCount = count
-        bigWord = word
+newList = list()
+for k,v in times.items():
+    temp = (v,k)
+    newList.append(temp)
 
-print(bigWord,bigCount)
+# print(newList)
+
+sorstedList = sorted(newList, reverse=True)
+# print(sorstedList)
+
+# for k,v in sorstedList[2:8:2]:
+for k,v in sorstedList[:5]:
+    print(v,k)
+
+# print(sorted(times))
+
